@@ -81,6 +81,14 @@ ol[role='list'] {
     list-style: none;
 }
 
+li{
+    list-style: none;
+}
+
+li > a{
+    text-decoration: none;
+}
+
 .sr-only{
     clip-path:inset(100%);
     clip:rect(0 0 0 0 );
