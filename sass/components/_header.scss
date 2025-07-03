@@ -7,13 +7,15 @@
     background-size:100% 100%;
     height: 750px;
 
-
     gap:8rem;
-
-    // padding-inline:12.5rem;
 
     display: flex;
     flex-direction: column;
+
+    @include u.breakpoint('small'){
+        background-image: url("../images/mobile/image-hero.jpg");
+        gap: 8rem;
+    }
 
     .header_block{
         display: flex;
@@ -60,6 +62,15 @@
             
         }
 
+        @include u.breakpoint('small'){
+            margin-top: 2rem;
+            padding-inline: 2rem;
+            
+            ul{
+                display: none;
+            }
+        }
+
     }
 
     .header__heading{
@@ -74,17 +85,16 @@
         line-height: 1.2;
 
         // padding-right: 2rem !important;
+
+        @include u.breakpoint('small'){
+            font-size: 2.4rem;
+            margin-left:2rem;
+            
+            padding: 2rem;
+            width: 320px;
+            line-height: 1.2;
+            
+        }
         
     }
-
-    // @include u.breakpoint(small){
-    //     .main__header{
-    //         background-image: url("../images/mobile/image-soccer-team.jpg");
-    //     }
-    //     .header__heading{
-    //         padding-inline: 2rem;
-
-    //     }
-    
-    // }
 }
