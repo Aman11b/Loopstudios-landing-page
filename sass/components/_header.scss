@@ -65,9 +65,58 @@
         @include u.breakpoint('small'){
             margin-top: 2rem;
             padding-inline: 2rem;
+            .logo{
+                z-index: 9999;
+                width: 180px;
+            }
+
+            .primary-navigation{
+                gap: 1em;
+                font-size: 1.2rem;
+                position: fixed;
+                z-index: 1000;
+                inset: 0 0 0 0;
+                background-color:var(--secondary-color);
+                flex-direction: column;
+                padding: min(30vh,14rem) 2rem;
+                margin: 0;
+
+                transform: translateX(100%);
+                transition: transform 450ms ease-out;
+
+                &[data-visible=true]{
+                    transform: translateX(0%);
+                }
+
+                & a{
+                    text-transform: uppercase;
+                }
+            }
+
             
-            ul{
-                display: none;
+
+            .mobile-nav-toggle{
+                display: block;
+                position: absolute;
+                background-image: url("../images/icon-hamburger.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: transparent;
+                width: 3rem;
+                aspect-ratio: 1;
+                top: 1.4rem;
+                right: 2rem;
+                z-index: 9999;
+
+                border: none;
+                outline: none;
+
+                &[aria-expanded="true"]{
+                    background-image: url("../images/icon-close.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: transparent;
+                }
             }
         }
 
