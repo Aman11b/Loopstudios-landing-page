@@ -36,8 +36,9 @@
                 a{
                     color: var(--primary-color);
                     padding-bottom: 1em;
-                    border-bottom: 2px solid transparent;
+                    // border-bottom: 2px solid transparent;
                     position: relative;
+                    font-size: 1.2rem;
 
                     &::after{
                         content: '';
@@ -61,8 +62,21 @@
             }
             
         }
+        .mobile-nav-toggle{
+            display: none;
+        }
+
+        @include u.breakpoint('large'){
+            padding-inline: 4rem;
+            margin-top: 3rem;
+            ul{
+                gap: 1rem;
+            }
+
+        }
 
         @include u.breakpoint('small'){
+
             margin-top: 2rem;
             padding-inline: 2rem;
             .logo{
@@ -89,11 +103,12 @@
                 }
 
                 & a{
-                    text-transform: uppercase;
+                    text-transform: uppercase; 
+                    &::after{
+                        display: none;
+                    }
                 }
             }
-
-            
 
             .mobile-nav-toggle{
                 display: block;
@@ -135,6 +150,18 @@
 
         // padding-right: 2rem !important;
 
+        @include u.breakpoint('large') {
+            border: 2px solid var(--primary-color);
+            font-size: 3.2rem;
+            font-weight: var(--font-weight-secondary);
+            margin-left: 4rem;
+    
+            padding: 2rem;
+            width: 420px;
+            line-height: 1.2;
+        
+        }
+
         @include u.breakpoint('small'){
             font-size: 2.4rem;
             margin-left:2rem;
@@ -144,6 +171,10 @@
             line-height: 1.2;
             
         }
+
+
+
+        
         
     }
 }
