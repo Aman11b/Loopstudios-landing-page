@@ -4,7 +4,7 @@ main{
     padding: var(--main-gap);
     display: flex;
     flex-direction: column;
-    gap: var(--main-gap);
+    gap: var(--main-gap-secondary);
 
     @include u.breakpoint('large'){
         padding: 3rem;
@@ -32,15 +32,13 @@ main{
         }
     }
 
-
-
     .main__content{
         position: absolute;
         background: var(--primary-color);
         padding: 6rem 0 0 6rem;
         bottom: 0;
         right: 0;
-        width: 680px;
+        width: 540px;
         z-index: 2;
 
         overflow: hidden;
@@ -93,5 +91,88 @@ main{
         }
     }
 
+    .main__grid{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .section__header{
+            display: inherit;
+            flex-direction: row;
+            justify-content: space-between;
+
+            // place-items: center;
+            align-items: center;
+
+            h1{
+                font-size: 2.6rem;
+                font-weight: var(--font-weight-secondary);
+                text-transform: uppercase;
+            }
+
+            button{
+                background: transparent;
+                padding: 14px 28px;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: var(--secondary-color);
+                    color: var(--primary-color);
+                }
+            }
+
+        }
+
+        .section__gallery{
+            display: grid;
+            width: 100%;
+            gap: 1.5rem;
+            grid-template-columns:repeat(4,1fr);
+            grid-template-rows: auto;
+
+            @include u.breakpoint('small'){
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+            }
+
+            .gallery__image{
+                position: relative;
+                cursor: pointer;
+
+                &::before{
+                    content: '';
+                    background-color: var(--overlay-color);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+
+                }
+
+                &:hover::before{
+                    display: block;
+                }
+
+                h1{
+                    position: absolute;
+                    bottom: 5%;
+                    left: 10%;
+                    color: var(--primary-color);
+                    text-transform: uppercase;
+                    font-weight: var(--font-weight-secondary);
+                    font-size: 2.4rem;
+                    z-index: 2;
+                }
+
+                &:hover h1 {
+                    color: black;
+                }
+
+                
+            }
+        }
+    }
    
 }

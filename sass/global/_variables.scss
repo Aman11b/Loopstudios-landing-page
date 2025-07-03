@@ -1,7 +1,8 @@
 :root{
     --primary-color: hsl(0, 0%, 100%);
     --secondary-color: hsl(0, 0%, 0%);
-    --accent-color: hsl(0, 0%, 50%);
+    --accent-color: hsla(0, 0%, 50%);
+    --overlay-color:hsla(24, 24%, 77%,0.6);
     
     --font-family-primary: 'Josefin Sans', sans-serif;
     --font-family-secondary: 'Alata', sans-serif;
@@ -13,6 +14,7 @@
     --font-weight-primary: 400;
     --font-weight-secondary: 300;
 
-    --main-gap:6rem;
+    --main-gap:10rem;
+    --main-gap-secondary: 6rem;
 
 }
