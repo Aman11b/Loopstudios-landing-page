@@ -91,18 +91,33 @@ main{
         }
     }
 
+    %see-all-button{
+        background: transparent;
+        padding: 14px 28px;
+        text-transform: uppercase;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+    }
+
     .main__grid{
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        // place-items: center;
+
+        @include u.breakpoint('small'){
+            place-items: center;
+        }
 
         .section__header{
             display: inherit;
             flex-direction: row;
             justify-content: space-between;
-
-            // place-items: center;
-            align-items: center;
 
             h1{
                 font-size: 2.6rem;
@@ -110,18 +125,28 @@ main{
                 text-transform: uppercase;
             }
 
-            button{
-                background: transparent;
-                padding: 14px 28px;
-                text-transform: uppercase;
-                cursor: pointer;
-
-                &:hover{
-                    background-color: var(--secondary-color);
-                    color: var(--primary-color);
+            .see-all-desktop{
+                @extend %see-all-button;
+                
+                @include u.breakpoint ('small'){
+                    display: none;
                 }
             }
 
+            @include u.breakpoint('small'){
+                h1{
+                    font-size: 2rem
+                }
+            }
+
+        }
+        .see-all-mobile{
+            @extend %see-all-button;
+            display: none;
+            @include u.breakpoint('small'){
+                
+                display: inline-block;
+            }
         }
 
         .section__gallery{
