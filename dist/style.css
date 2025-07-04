@@ -122,15 +122,15 @@ li > a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
-  height: 750px;
-  gap: 8rem;
+  height: 650px;
+  gap: 6rem;
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 35em) {
   .main__header {
     background-image: url("../images/mobile/image-hero.jpg");
-    gap: 8rem;
+    gap: 6rem;
   }
 }
 .main__header .header_block {
@@ -138,7 +138,7 @@ li > a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding-inline: 10rem;
 }
 .main__header .header_block ul {
@@ -235,11 +235,11 @@ li > a {
 .main__header .header__heading {
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
-  font-size: 4.2rem;
+  font-size: 4rem;
   font-weight: var(--font-weight-secondary);
   margin-left: 10rem;
-  padding: 2.5rem;
-  width: 680px;
+  padding: 2rem;
+  width: 640px;
   line-height: 1.2;
 }
 @media (max-width: 56.25em) {
@@ -249,7 +249,7 @@ li > a {
     font-weight: var(--font-weight-secondary);
     margin-left: 4rem;
     padding: 2rem;
-    width: 420px;
+    width: 440px;
     line-height: 1.2;
   }
 }
@@ -621,5 +621,4 @@ body {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-primary);
   font-size: var(--font-size);
-  margin: 0;
 }

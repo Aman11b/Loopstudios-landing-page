@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Loopstudios landing page",
   "scripts": {
-    "predeploy": "echo 'No build step needed'",
-    "deploy": "gh-pages -d ."
+    "predeploy": "echo 'Preparing build folder...'",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

@@ -5,16 +5,16 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size:100% 100%;
-    height: 750px;
+    height: 650px;
 
-    gap:8rem;
+    gap:6rem;
 
     display: flex;
     flex-direction: column;
 
     @include u.breakpoint('small'){
         background-image: url("../images/mobile/image-hero.jpg");
-        gap: 8rem;
+        gap: 6rem;
     }
 
     .header_block{
@@ -22,7 +22,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-top:4rem;
+        margin-top:2rem;
 
         padding-inline: 10rem;
         
@@ -140,12 +140,12 @@
     .header__heading{
         color: var(--primary-color);
         border: 2px solid var(--primary-color);
-        font-size: 4.2rem;
+        font-size: 4rem;
         font-weight: var(--font-weight-secondary);
         margin-left: 10rem;
 
-        padding: 2.5rem;
-        width: 680px;
+        padding: 2rem;
+        width: 640px;
         line-height: 1.2;
 
         // padding-right: 2rem !important;
@@ -157,7 +157,7 @@
             margin-left: 4rem;
     
             padding: 2rem;
-            width: 420px;
+            width: 440px;
             line-height: 1.2;
         
         }
@@ -171,10 +171,6 @@
             line-height: 1.2;
             
         }
-
-
-
-        
-        
+ 
     }
 }
