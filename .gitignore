@@ -23,20 +23,8 @@ npm-debug.log*
 
 # Production
 /build
-/dist
 /.next
 /out
-
-# 👇 ALLOW build folder contents for deployment
-!build/
-!build/index.html
-!build/main.js
-!build/dist/
-!build/dist/style.css
-!build/images/
-!build/images/**
-!build/**/*.js
-!build/**/*.html
 
 # IDEs and editors
 /.idea

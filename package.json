@@ -1,5 +1,13 @@
 {
+  "name": "loopstudios-landing-page",
+  "version": "1.0.0",
+  "description": "Loopstudios landing page",
+  "scripts": {
+    "predeploy": "echo 'No build step needed'",
+    "deploy": "gh-pages -d ."
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  }
+  },
+  "homepage": "https://Aman11b.github.io/Loopstudios-landing-page"
 }
