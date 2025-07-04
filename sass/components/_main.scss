@@ -135,6 +135,9 @@ main{
                 display: flex;
                 flex-direction: column;
                 place-items: center;
+
+                @include u.mobile-gallery-images;
+                
             }
 
             .gallery__image{
@@ -164,6 +167,31 @@ main{
                     font-weight: var(--font-weight-secondary);
                     font-size: 2.4rem;
                     z-index: 2;
+                }
+
+                @include u.breakpoint('large'){
+                    h1{
+                        font-size: 1.4rem;
+                        font-weight: var(--font-weight-secondary);
+                    }
+                }
+
+                @include u.breakpoint('small'){
+                    height: 200px;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+
+                    img{
+                        display: none;
+                    }
+                    
+                    h1{
+                        font-size: 2rem;
+                        bottom: 10%;
+                        left: 5%;
+                        width: 49%;
+                    }
                 }
 
                 &:hover h1 {

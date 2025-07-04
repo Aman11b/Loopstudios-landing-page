@@ -1,0 +1,18 @@
+$images:(
+    1:'deep-earth',
+    2:'night-arcade',
+    3:'soccer-team',
+    4:'grid',
+    5:'from-above',
+    6:'pocket-borealis',
+    7:'curiosity',
+    8:'fisheye'
+);
+
+@mixin mobile-gallery-images{
+    @each $index, $name in $images{
+        .gallery__image:nth-child(#{$index}){
+            background-image: url('../images/mobile/image-#{$name}.jpg');
+        }
+    }
+}
