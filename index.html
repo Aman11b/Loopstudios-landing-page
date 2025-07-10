@@ -24,22 +24,28 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <header class="main__header">
       <div class="header_block">
         <div class="logo">
           <img src="images/logo.svg" alt="logo" />
         </div>
 
-        <button aria-controls="primary-navigation" 
-        aria-expanded="false"
-        class="mobile-nav-toggle"
-        type="button">
+        <button
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          class="mobile-nav-toggle"
+          type="button"
+          aria-label="open menu"
+        >
           <span class="sr-only">Menu</span>
         </button>
-        <nav class="nav-menu">
-          <ul id="primary-navigation" 
-          class="primary-navigation"
-          data-visible="false">
+        <nav class="nav-menu" aria-label="Main navigation">
+          <ul
+            id="primary-navigation"
+            class="primary-navigation"
+            data-visible="false"
+          >
             <li><a href="#About">About</a></li>
             <li><a href="#Careers">Careers</a></li>
             <li><a href="#Events">Events</a></li>
@@ -50,12 +56,12 @@
       </div>
       <div class="header__heading">IMMERSIVE EXPERIENCES THAT DELIVER</div>
     </header>
-    <main>
+    <main id="main">
       <section class="main__intro">
         <div>
           <img
             src="./images/desktop/image-interactive.jpg"
-            alt="interactive image"
+            alt="Person exploring a VR environment"
           />
         </div>
         <div class="main__content">
@@ -77,51 +83,59 @@
           <div class="gallery__image">
             <img
               src="./images/desktop/image-deep-earth.jpg"
-              alt="image-deep-earth"
+              alt="VR landscape
+            of deep earth terrain"
             />
             <h1>Deep Earth</h1>
           </div>
           <div class="gallery__image">
             <img
               src="./images/desktop/image-night-arcade.jpg"
-              alt="image-night-arcade"
+              alt="Retro-style VR night arcade"
             />
             <h1>Night arcade</h1>
           </div>
           <div class="gallery__image">
             <img
               src="./images/desktop/image-soccer-team.jpg"
-              alt="image-soccer-team"
+              alt="VR simulation
+            of a soccer team"
             />
             <h1>Soccer team VR</h1>
           </div>
           <div class="gallery__image">
-            <img src="./images/desktop/image-grid.jpg" alt="image-grid" />
+            <img
+              src="./images/desktop/image-grid.jpg"
+              alt="Futuristic VR grid landscape"
+            />
             <h1>The grid</h1>
           </div>
           <div class="gallery__image">
             <img
               src="./images/desktop/image-from-above.jpg"
-              alt="image-from-above"
+              alt="Aerial VR view from above"
             />
             <h1>From up above VR</h1>
           </div>
           <div class="gallery__image">
             <img
               src="./images/desktop/image-pocket-borealis.jpg"
-              alt="image-pocket-borealis"
+              alt="Pocket-sized VR aurora borealis"
             />
             <h1>Pocket borealis</h1>
           </div>
           <div class="gallery__image">
             <img
               src="./images/desktop/image-curiosity.jpg"
-              alt="image-curiosity"
+              alt="VR rendering of the Curiosity rover"
             />
             <h1>The curiosity</h1>
           </div>
           <div class="gallery__image">
-            <img src="./images/desktop/image-fisheye.jpg" alt="image-fisheye" />
+            <img
+              src="./images/desktop/image-fisheye.jpg"
+              alt="Fisheye lens VR effect"
+            />
             <h1>Make it fisheye</h1>
           </div>
         </div>
@@ -149,7 +163,7 @@
         </div>
       </div>
       <div class="footer__nav">
-        <nav>
+        <nav aria-label="Footer navigation">
           <ul>
             <li><a href="">About</a></li>
             <li><a href="">Careers</a></li>
@@ -158,7 +172,7 @@
             <li><a href="">Support</a></li>
           </ul>
         </nav>
-        
+
         <div class="socials-mobile">
           <span>
             <img src="./images/icon-facebook.svg" alt="icon-facebook" />
